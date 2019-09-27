@@ -14,10 +14,10 @@ import { ForecastModalComponent } from '../shared/forecast-modal/forecast-modal.
 })
 
 export class DashboardComponent implements OnInit {
-
-  public infoMsg: string;
+  
   citySearchQueryString: null;
   citySearchQuery = new Subject<string>();
+  public infoMsg: string;
   public foreCastData: ForeCast;
   public cityData: City;
   public forCastDetails: ForeCast;
