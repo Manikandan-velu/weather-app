@@ -6,8 +6,6 @@ export const environment = {
   production: false,
   API_BASE_URL: 'http://api.openweathermap.org/data/2.5',
   APP_ID: '45f4dd45e0f724512ba044c5a2caf4bc',
-  API_BASE_URL2: 'https://samples.openweathermap.org/data/2.5',
-  APP_ID_2: 'b1b15e88fa797225412429c1c50c122a1'
 };
 
 /*

@@ -7,9 +7,12 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "private": true,
+  "homepage": "https://Manikandan-velu.github.io/weather-app/",
   "dependencies": {
     "@angular/animations": "~7.2.0",
     "@angular/cdk": "~7.3.7",
