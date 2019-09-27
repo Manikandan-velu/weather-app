@@ -1,0 +1,35 @@
+<div class="container">
+  <h3>{{data.city}}</h3>
+  <div class="p-0 mb-2 modal-list-container">
+    <div class="flex-row" *ngFor="let list of data.moreDetails">
+        <div>
+            <h3 class="center-align">Main Data</h3>
+            <ul>
+            <li>Sea Level: {{ list.main.sea_level }}</li>
+            <li>Ground Level: {{ list.main.grnd_level }}</li>
+            <li>Pressure: {{ list.main.pressure }}</li>
+            <li>Humidity: {{ list.main.humidity }}</li>
+            <li>Temperature: {{ list.main.temp }}</li>
+            </ul>
+        </div>
+        <div>
+            <h3>Weather</h3>
+            <ul *ngFor="let weather of list.weather">
+            <li>Description: {{ weather.description }}</li>
+            <li>Condition: {{ weather.main }}</li>
+            </ul>
+        </div>
+        <div>
+            <h3>Wind Details</h3>
+            <ul>
+            <li>Speed: {{ list.wind.speed }}</li>
+            <li>Degree: {{ list.wind.deg }}</li>
+            </ul>
+        </div>
+    </div>
+  </div>
+</div>
+
+<div mat-dialog-actions class="close-btn ">
+  <button mat-raised-button mat-dialog-close >close</button>
+</div>
