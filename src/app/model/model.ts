@@ -36,3 +36,10 @@ export class City {
     population: number;
     timezone: number
 }
+
+export interface cityData {
+    id: number;
+    country: string;
+    state: string;
+    city: string;
+  }
