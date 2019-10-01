@@ -7,49 +7,39 @@
 <!-- Weather Search Input -->
 <div class="example-container">
   <mat-form-field>
-    <input matInput placeholder="search city" [(ngModel)]="citySearchQueryString" (ngModelChange)="citySearchQuery.next($event)" />
+    <input matInput placeholder="search city" [(ngModel)]="citySearchQueryString" (keyup)="applyFilter($event.target.value)" />
   </mat-form-field>
   <button mat-raised-button color="primary" (click)="clearSearch()">{{ citySearchQueryString ? 'Clear' : 'Search' }}</button>
 </div>
 
 <h3 class="center-align" *ngIf="!foreCastData">{{ infoMsg }}</h3>
 
-<!-- Weather details List -->
-<div class="ml-4" *ngIf="foreCastData">
-  <div>
-    <h2 class="head-color">
-      {{ cityData.name }}, {{ cityData.country }}
-      <mat-icon class="color-orange">cloud</mat-icon>
-    </h2>
-  </div>
-  <div class="list-container">
-    <mat-card class="p-0 mb-2 flex-row" *ngFor="let list of foreCastData">
-      <h2 class="self-align head-color">{{ list.dt_txt | date: 'short' }}</h2>
-      <div>
-        <h3 class="center-align">Main Data <mat-icon class="color-blue">language</mat-icon></h3>
-        <ul>
-          <li>Sea Level: {{ list.main.sea_level }}</li>
-          <li>Ground Level: {{ list.main.grnd_level }}</li>
-          <li>Pressure: {{ list.main.pressure }} &#8457;</li>
-          <li>Humidity: {{ list.main.humidity }}</li>
-          <li>Temperature: {{ list.main.temp }} &#8451;</li>
-        </ul>
-      </div>
-      <div>
-        <h3>Weather <mat-icon class="color-orange">wb_sunny</mat-icon></h3>
-        <ul *ngFor="let weather of list.weather">
-          <li>Description: {{ weather.description }}</li>
-          <li>Condition: {{ weather.main }}</li>
-        </ul>
-      </div>
-      <div>
-        <h3>Wind Details <mat-icon class="color-hash">flare</mat-icon></h3>
-        <ul>
-          <li>Speed: {{ list.wind.speed }}</li>
-          <li>Degree: {{ list.wind.deg }}</li>
-        </ul>
-      </div>
-      <button mat-raised-button class="self-align" (click)="getMoreDetails()">View more</button>
-    </mat-card>
-  </div>
+<div class="list-container">
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 full-width">
+    <ng-container matColumnDef="city">
+      <th mat-header-cell *matHeaderCellDef>City</th>
+      <td mat-cell *matCellDef="let element">{{ element.city }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="state">
+      <th mat-header-cell *matHeaderCellDef>State</th>
+      <td mat-cell *matCellDef="let element">{{ element.state }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="country">
+      <th mat-header-cell *matHeaderCellDef>Country</th>
+      <td mat-cell *matCellDef="let element">{{ element.country }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="action">
+      <th mat-header-cell *matHeaderCellDef>Action</th>
+      <td mat-cell *matCellDef="let element">
+        <mat-icon class="m-2 color-blue cursor-pointer" (click)="getForeCast(element.city)">visibility</mat-icon>
+      </td>
+    </ng-container>
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+  </table>
+
+  <mat-paginator [pageSizeOptions]="[10]" showFirstLastButtons></mat-paginator>
 </div>

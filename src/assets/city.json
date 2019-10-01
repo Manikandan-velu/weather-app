@@ -1,0 +1,146 @@
+[
+    {
+        "city": "Agra",
+        "country": "India",
+        "id": 22,
+        "state": "Delhi"
+    },
+    {
+        "city": "Austin",
+        "country": "United States",
+        "id": 4,
+        "state": "Arkansas"
+    },
+    {
+        "city": "Bangalore",
+        "country": "India",
+        "id": 15,
+        "state": "Karnataka"
+    },
+    {
+        "city": "Boston",
+        "country": "United States",
+        "id": 6,
+        "state": "Massachusetts"
+    },
+    {
+        "city": "Branson",
+        "country": "United States",
+        "id": 3,
+        "state": "Missouri"
+    },
+    {
+        "city": "Brookland",
+        "country": "United States",
+        "id": 7,
+        "state": "Arkansas"
+    },
+    {
+        "city": "Caraway",
+        "country": "United States",
+        "id": 9,
+        "state": "Arkansas"
+    },
+    {
+        "city": "Chennai",
+        "country": "India",
+        "id": 16,
+        "state": "Tamil Nadu"
+    },
+    {
+        "city": "Chicago",
+        "country": "United States",
+        "id": 10,
+        "state": "Illinois"
+    },
+    {
+        "city": "Coimbatore",
+        "country": "India",
+        "id": 18,
+        "state": "Tamil Nadu"
+    },
+    {
+        "city": "Delhi",
+        "country": "India",
+        "id": 25,
+        "state": "Delhi"
+    },
+    {
+        "city": "Goa",
+        "country": "India",
+        "id": 14,
+        "state": "Goa"
+    },
+    {
+        "city": "Hydrapad",
+        "country": "India",
+        "id": 20,
+        "state": "Andhra"
+    },
+    {
+        "city": "Kolkata",
+        "country": "India",
+        "id": 23,
+        "state": "West Bengal"
+    },
+    {
+        "city": "Miami",
+        "country": "United States",
+        "id": 11,
+        "state": "Florida"
+    },
+    {
+        "city": "Mumbai",
+        "country": "India",
+        "id": 24,
+        "state": "Maharashtra"
+    },
+    {
+        "city": "New York",
+        "country": "United States",
+        "id": 13,
+        "state": "New York"
+    },
+    {
+        "city": "Orlando",
+        "country": "United States",
+        "id": 12,
+        "state": "Florida"
+    },
+    {
+        "city": "Pandichery",
+        "country": "India",
+        "id": 21,
+        "state": "Pandichery"
+    },
+    {
+        "city": "Pune",
+        "country": "India",
+        "id": 26,
+        "state": "Maharashtra"
+    },
+    {
+        "city": "San Diego",
+        "country": "United States",
+        "id": 2,
+        "state": "California"
+    },
+    {
+        "city": "San Francisco",
+        "country": "United States",
+        "id": 1,
+        "state": "California"
+    },
+    {
+        "city": "Seattle",
+        "country": "United States",
+        "id": 5,
+        "state": "Washington"
+    },
+    {
+        "city": "Trichy",
+        "country": "India",
+        "id": 17,
+        "state": "Tamil Nadu"
+    }
+]

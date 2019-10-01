@@ -1,20 +1,24 @@
 <div class="container">
-  <h3>{{ data.city }}</h3>
-  <div class="p-0 mb-2 modal-list-container">
-    <div class="flex-row" *ngFor="let list of data.moreDetails">
+  <h2 class="head-color">
+    Weather forecast City: {{ data.city }}, Date: {{ data.moreDetails.dt_txt | date: 'dd-MMM-yy' }}
+    <mat-icon class="color-orange">cloud</mat-icon>
+  </h2>
+  <div class="p-0 mb-2">
+    <div class="flex-row">
       <div>
-        <h3 class="center-align">Main Data</h3>
+        <h3 class="center-align">Main Data <mat-icon class="color-blue">language</mat-icon></h3>
         <ul>
-          <li>Sea Level: {{ list.main.sea_level }}</li>
-          <li>Ground Level: {{ list.main.grnd_level }}</li>
-          <li>Pressure: {{ list.main.pressure }}</li>
-          <li>Humidity: {{ list.main.humidity }}</li>
-          <li>Temperature: {{ list.main.temp }}</li>
+          <li>Sea Level: {{ data.moreDetails.main.sea_level }}</li>
+          <li>Ground Level: {{ data.moreDetails.main.grnd_level }}</li>
+          <li>Pressure: {{ data.moreDetails.main.pressure }} &#8457;</li>
+          <li>Humidity: {{ data.moreDetails.main.humidity }}</li>
+          <li>Temperature: {{ data.moreDetails.main.temp }} &#8451;</li>
         </ul>
       </div>
+
       <div>
-        <h3>Weather</h3>
-        <ul *ngFor="let weather of list.weather">
+        <h3>Weather <mat-icon class="color-orange">wb_sunny</mat-icon></h3>
+        <ul *ngFor="let weather of data.moreDetails.weather">
           <li>Description: {{ weather.description }}</li>
           <li>Condition: {{ weather.main }}</li>
         </ul>
@@ -22,8 +26,8 @@
       <div>
         <h3>Wind Details</h3>
         <ul>
-          <li>Speed: {{ list.wind.speed }}</li>
-          <li>Degree: {{ list.wind.deg }}</li>
+          <li>Speed: {{ data.moreDetails.wind.speed }}</li>
+          <li>Degree: {{ data.moreDetails.wind.deg }}</li>
         </ul>
       </div>
     </div>
