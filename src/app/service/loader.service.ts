@@ -7,6 +7,6 @@ export class LoaderService {
     public isLoading = new BehaviorSubject(false);
 
     constructor() {
-      console.log(this.isLoading);
+      console.log('Check Status',this.isLoading);
     }
 }
