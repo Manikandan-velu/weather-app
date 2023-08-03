@@ -1,15 +1,15 @@
 <mat-toolbar color="primary">
   <mat-toolbar-row>
-    <span>Weather App</span>
+    <span>Weather Application</span>
   </mat-toolbar-row>
 </mat-toolbar>
 
-<!-- Weather Search Input -->
+<!-- Start Weather Search Input -->
 <div class="example-container">
   <mat-form-field>
     <input matInput placeholder="search city" [(ngModel)]="citySearchQueryString" (ngModelChange)="citySearchQuery.next($event)" />
   </mat-form-field>
-  <button mat-raised-button color="primary" (click)="clearSearch()">{{ citySearchQueryString ? 'Clear' : 'Search' }}</button>
+  <button mat-raised-button color="primary" (click)="clearSearch()">{{ citySearchQueryString ? 'Clear Me' : 'Search' }}</button>
 </div>
 
 <h3 class="center-align" *ngIf="!foreCastData">{{ infoMsg }}</h3>
@@ -26,7 +26,7 @@
     <mat-card class="p-0 mb-2 flex-row" *ngFor="let list of foreCastData">
       <h2 class="self-align head-color">{{ list.dt_txt | date: 'short' }}</h2>
       <div>
-        <h3 class="center-align">Main Data <mat-icon class="color-blue">language</mat-icon></h3>
+        <h3 class="center-align">Main Data <mat-icon class="color-blue">Language</mat-icon></h3>
         <ul>
           <li>Sea Level: {{ list.main.sea_level }}</li>
           <li>Ground Level: {{ list.main.grnd_level }}</li>
