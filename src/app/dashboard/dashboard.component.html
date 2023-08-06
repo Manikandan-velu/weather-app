@@ -4,7 +4,7 @@
   </mat-toolbar-row>
 </mat-toolbar>
 
-<!-- Weather Search Input -->
+<!-- start weather Search Input -->
 <div class="example-container">
   <mat-form-field>
     <input matInput placeholder="search city" [(ngModel)]="citySearchQueryString" (ngModelChange)="citySearchQuery.next($event)" />
@@ -14,7 +14,7 @@
 
 <h3 class="center-align" *ngIf="!foreCastData">{{ infoMsg }}</h3>
 
-<!-- Weather details List -->
+<!-- start weather details List -->
 <div class="ml-4" *ngIf="foreCastData">
   <div>
     <h2 class="head-color">
